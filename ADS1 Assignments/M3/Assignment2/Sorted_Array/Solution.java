@@ -44,19 +44,24 @@ public final class Solution {
         }
         while (i < m && j < n) {
             if (a[i] < b[j]) {
-                temp += Integer.toString(a[i++]) + ",";
+                temp += Integer.toString(a[i]) + ",";
+                i++;
             } else if (a[i] > b[j]) {
-                temp += Integer.toString(b[j++]) + ",";
+                temp += Integer.toString(b[j]) + ",";
+                j++;
             } else {
-                temp += Integer.toString(b[j++]) + ",";
+                temp += Integer.toString(b[j]) + ",";
+                j++;
                 i++;
             }
         }
         while (i < m) {
-            temp += Integer.toString(a[i++]) + ",";
+            temp += Integer.toString(a[i]) + ",";
+            i++;
         }
         while (j < n) {
-            temp += Integer.toString(b[j++]) + ",";
+            temp += Integer.toString(b[j]) + ",";
+            j++;
         }
         System.out.println(temp.substring(0, temp.length() - 1));
     }
