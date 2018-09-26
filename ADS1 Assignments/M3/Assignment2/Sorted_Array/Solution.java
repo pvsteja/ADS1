@@ -35,7 +35,7 @@ public final class Solution {
         k = 0;
         if (n != 0) {
             s = sc.nextLine().split(",");
-            System.out.println("String .." +s);
+            // System.out.println("String .." + s);
             for (String each : s) {
                 b[k++] = Integer.parseInt(each);
             }
