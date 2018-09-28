@@ -80,10 +80,10 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan= new Scanner(System.in);
-        int k =Integer.parseInt(scan.nextLine());
-        for (int i= 0; i < k; i++) {
-            String s= scan.next();
+        Scanner scan = new Scanner(System.in);
+        int k = Integer.parseInt(scan.nextLine());
+        for (int i = 0; i < k; i++) {
+            String s = scan.next();
             if (theParanthesis(s)) {
                 System.out.println("YES");
             } else {
@@ -91,11 +91,18 @@ public final class Solution {
             }
         }
     }
+    /**.
+     * { function_description }
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static boolean theParanthesis(final String s) {
-        LinkedList l= new LinkedList();
-        int length =s.length();
-        for (int i =0; i < length; i++) {
-            char ch =s.charAt(i);
+        LinkedList l = new LinkedList();
+        int length = s.length();
+        for (int i = 0; i < length; i++) {
+            char ch = s.charAt(i);
             if (ch == '{' || ch == '(' || ch == '[') {
                 l.push(ch);
             } else {
