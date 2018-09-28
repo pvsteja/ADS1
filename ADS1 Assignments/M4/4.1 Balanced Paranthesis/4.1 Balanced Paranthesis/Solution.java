@@ -111,9 +111,9 @@ public final class Solution {
                 }
                 if (ch == '}' && l.top() == '{') {
                     l.pop();
-                } else if (ch== ']' && l.top() == '[') {
+                } else if (ch == ']' && l.top() == '[') {
                     l.pop();
-                } else if (ch== ')' && l.top() == '(') {
+                } else if (ch == ')' && l.top() == '(') {
                     l.pop();
                 } else {
                     return false;
