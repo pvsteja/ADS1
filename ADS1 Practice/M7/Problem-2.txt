@@ -1,0 +1,51 @@
+Show, how Insertion sort sorts the array E A S Y Q U E S T I O N.
+
+
+
+i   j   j-1   0  1  2  3  4  5  6  7  8  9 10  11  EXCH(j,j-1)
+
+0   0    -1   E  A  S  Y  Q  U  E  S  T  I  O  N
+
+1   1	 0	  A  E  S  Y  Q  U  E  S  T  I  O  N	(E,A)
+
+2   2    1    A  E  S  Y  Q  U  E  S  T  I  O  N	(NO EXCH)
+
+3   3    2    A  E  S  Y  Q  U  E  S  T  I  O  N 	(NO EXCH)
+
+4   4    3    A  E  S  Q  Y  U  E  S  T  I  O  N 	(Y,Q)
+4   3    2    A  E  Q  S  Y  U  E  S  T  I  O  N 	(S,Q)
+
+5   5    4    A  E  Q  S  U  Y  E  S  T  I  O  N 	(NO EXCH)
+
+6   6    5    A  E  Q  S  U  E  Y  S  T  I  O  N 	(Y,E)
+6   5    4    A  E  Q  S  E  U  Y  S  T  I  O  N 	(U,E)
+6   4    3    A  E  Q  E  S  U  Y  S  T  I  O  N 	(S,E)
+6   3    2    A  E  E  Q  S  U  Y  S  T  I  O  N 	(Q,E)
+
+7   7    6    A  E  E  Q  S  U  S  Y  T  I  O  N 	(Y,S)
+7   6    5    A  E  E  Q  S  S  U  Y  T  I  O  N 	(U,S)
+
+8   8    7    A  E  E  Q  S  S  U  T  Y  I  O  N 	(Y,T)
+8   7    6    A  E  E  Q  S  S  T  U  Y  I  O  N 	(U,T)
+
+9   9    8    A  E  E  Q  S  S  T  U  I  Y  O  N 	(Y,I)
+9   8    7    A  E  E  Q  S  S  T  I  U  Y  O  N 	(U,I)
+9   7    6    A  E  E  Q  S  S  I  T  U  Y  O  N 	(T,I)
+9   6    5    A  E  E  Q  S  I  S  T  U  Y  O  N 	(S,I)
+9   5    4    A  E  E  Q  I  S  S  T  U  Y  O  N 	(S,I)
+9   4    3    A  E  E  I  Q  S  S  T  U  Y  O  N 	(Q,I)
+
+10  10   9    A  E  E  I  Q  S  S  T  U  O  Y  N 	(Y,O)
+10  9    8    A  E  E  I  Q  S  S  T  O  U  Y  N 	(U,O)
+10  8    7    A  E  E  I  Q  S  S  O  T  U  Y  N 	(T,O)
+10  7    6    A  E  E  I  Q  S  O  S  T  U  Y  N 	(S,O)
+10  6    5    A  E  E  I  Q  0  S  S  T  U  Y  N 	(S,O)
+10  5    4    A  E  E  I  O  Q  S  S  T  U  Y  N 	(Q,O)
+
+11  11   10   A  E  E  I  O  Q  S  S  T  U  N  Y 	(Y,N)
+11  10   9    A  E  E  I  O  Q  S  S  T  N  U  Y 	(U,N)
+11  9    8    A  E  E  I  O  Q  S  S  N  T  U  Y 	(T,N)
+11  8    7    A  E  E  I  O  Q  S  N  S  T  U  Y 	(S,N)
+11  7    6    A  E  E  I  O  Q  N  S  S  T  U  Y 	(S,N)
+11  6    5    A  E  E  I  O  N  Q  S  S  T  U  Y 	(Q,N)
+11  5    4    A  E  E  I  N  O  Q  S  S  T  U  Y 	(O,N)

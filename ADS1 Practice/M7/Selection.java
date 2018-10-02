@@ -21,10 +21,18 @@ public class Selection {
 		a[i] = a[min];
 		a[min] = temp;
 	}
+	public static  String toString(Comparable[] a) {
+		String s = "";
+		for (Comparable i: a) {
+			s += i+", ";
+		}
+		return s.substring(0,s.length()-2);
+	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String[] a = scan.nextLine().split(" ");
 		sort(a);
-		System.out.println(Arrays.toString(a));
+		// System.out.println(Arrays.toString(a));
+		System.out.println(toString(a));
 	}
 }
