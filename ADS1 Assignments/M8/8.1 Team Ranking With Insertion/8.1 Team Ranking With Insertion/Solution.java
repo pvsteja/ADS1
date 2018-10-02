@@ -16,6 +16,10 @@ public final class Solution {
     private Solution() {
 
     }
+    /**
+     * Representing THREE as 3.
+     */
+    private static final int THREE = 3;
     /**.
      * { main function }
      *
@@ -32,13 +36,15 @@ public final class Solution {
         }
         String[] inputLineArray = input.split("\n");
         Team[] teamsArray = new Team[inputLineArray.length];
-        for (int i=0; i<inputLineArray.length; i++) {
+        for (int i = 0; i < inputLineArray.length; i++) {
             String[] tokens = inputLineArray[i].split(",");
-            teamsArray[i] = new Team(tokens[0], Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]));
+            teamsArray[i] = new Team(tokens[0], Integer.parseInt(tokens[1]),
+             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[THREE]));
         }
         Selectionsort ss = new Selectionsort();
         ss.sort(teamsArray);
-        System.out.println(Arrays.toString(teamsArray).replace(" ", "").replace("[", "").replace("]", ""));
+        System.out.println(Arrays.toString(teamsArray).replace(" ", "")
+            .replace("[", "").replace("]", ""));
 
     }
 }
