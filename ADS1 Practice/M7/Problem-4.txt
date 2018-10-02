@@ -4,25 +4,42 @@ Which method runs faster for an array in reverse order, basic selection sort or 
 insertion sort
 
 i  j  j-1   0  1  2  3  4  5  exch(j,j-1)  comparison
-0  0  -1    6  5  4  3  2  1  no exch       1
-1  1   0    6  6  6  6  6  6         1
-2  2   1    6  6  6  6  6  6  no exch       1
-3  3   2    6  6  6  6  6  6  no exch       1
-4  4   3    6  6  6  6  6  6  no exch       1
-5  5   4    6  6  6  6  6  6  no exch       1
 
-Time complexity for insertion sort is N
+0  0  -1    6  5  4  3  2  1       0           0
+
+1  1   0    5  6  4  3  2  1       (6,5)       1
+
+2  2   1    5  4  6  3  2  1       (6,4)
+2  1   0    4  5  6  3  2  1       (5,4)       2
+
+3  3   2    4  5  3  5  2  1       (6,3)
+3  2   1    4  3  5  6  2  1       (5,3)
+3  1   0    3  4  5  6  2  1       (4,3)       3
+
+4  4   3    3  4  5  2  6  1       (6,2)
+4  3   2    3  4  2  5  6  1       (5,2)
+4  2   1    3  2  4  5  6  1       (4,2)
+4  1   0    2  3  4  5  6  1       (3,2)       4
+
+5  5   4    2  3  4  5  1  6       (6,1)
+5  5   4    2  3  4  1  5  6       (5,1)
+5  5   4    2  3  1  4  5  6       (4,1)
+5  5   4    2  1  3  4  5  6       (3,1)
+5  5   4    1  2  3  4  5  6       (2,1)       5
+
+Time complexity for insertion sort is N^2/2
 
 selection sort
 
-i  min j   0  1  2  3  4  5    exch(i,min)    comparison
-0   0  1   6  5  4  3  2  1     no exch       5
-1   1  2   6  6  6  6  6  6     no exch       4
-2   2  3   6  6  6  6  6  6     no exch       3
-3   3  4   6  6  6  6  6  6     no exch       2
-4   4  5   6  6  6  6  6  6     no exch       1
+i  min  j  0  1  2  3  4  5    exch(j,min)    comparison
+
+0   0   1  1  5  4  3  2  6      (6,1)         5
+1   1   2  1  2  4  3  5  6      (5,2)         4
+2   2   3  1  2  3  4  5  6      (4,3)         3
+3   3   4  1  2  3  4  5  6       No exch      2
+4   4   5  1  2  3  4  5  6       No exch      1
 
 Time complexity for selection sort is N^2/2
 
 
-Insertion sort runs faster than Selection sort
+Selection sort runs faster than Insertion sort because of less number of exchanges.
