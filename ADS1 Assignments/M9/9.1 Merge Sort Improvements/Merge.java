@@ -46,7 +46,7 @@ class Merge {
     public void sort(final Comparable[] a, final Comparable[] aux,
                      final int low, final int high) {
         if (high <= low + x) {
-            Sort(aux, low, high);
+            insertionSort(aux, low, high);
             System.out.println("Insertion sort method invoked...");
             return;
         }
@@ -81,7 +81,7 @@ class Merge {
      * @param      low    The lower value
      * @param      high    The higher value
      */
-    public void Sort(final Comparable[] a,
+    public void insertionSort(final Comparable[] a,
                 final int low, final int high) {
         for (int i = low; i <= high; i++) {
             for (int j = i; j > low; j--) {
