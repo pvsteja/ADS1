@@ -19,20 +19,20 @@ class Merge {
      * Time complexity of this method is O(N).
      * @param      a  The a
      * @param      aux    The auxiliary
-     * @param      lo     The lower value
+     * @param      low     The lower value
      * @param      mid    The middle value
-     * @param      hi     The higher value
+     * @param      high     The higher value
      */
     public void merge(final Comparable[] a, final Comparable[] aux,
-                      final int lo, final int mid, final int hi) {
-        // assert isSorted(a, lo, mid);
-        // assert isSorted(a, mid + 1, hi);
-        int i = lo;
+                      final int low, final int mid, final int high) {
+        // assert isSorted(a, low, mid);
+        // assert isSorted(a, mid + 1, high);
+        int i = low;
         int j = mid + 1;
-        for (int k = lo; k <= hi; k++) {
+        for (int k = low; k <= high; k++) {
             if (i > mid) {
                 aux[k] = a[j++];
-            } else if (j > hi) {
+            } else if (j > high) {
                 aux[k] = a[i++];
             } else if (less(a[j], a[i])) {
                 aux[k] = a[j++];
@@ -40,35 +40,35 @@ class Merge {
                 aux[k] = a[i++];
             }
         }
-        // assert isSorted(aux, lo, hi);
+        // assert isSorted(aux, low, high);
     }
     /**
      * {Method for sorting}.
      * Time complexity of sorting is O(log(N)).
      * @param      a  The a
      * @param      aux    The auxiliary a
-     * @param      lo     The lower value
-     * @param      hi     The higher value
+     * @param      low     The lower value
+     * @param      high     The higher value
      */
     public void sort(final Comparable[] a, final Comparable[] aux,
-                     final int lo, final int hi) {
-        if (hi <= lo + x) {
-            insertionSort(aux, lo, hi);
+                     final int low, final int high) {
+        if (high <= low + x) {
+            insertionSort(aux, low, high);
             System.out.println("Insertion sort method invoked...");
             return;
         }
-        int mid = lo + (hi - lo) / 2;
-        sort(aux, a, lo, mid);
-        sort(aux, a, mid + 1, hi);
+        int mid = low + (high - low) / 2;
+        sort(aux, a, low, mid);
+        sort(aux, a, mid + 1, high);
         if (!less(a[mid + 1], a[mid])) {
-            for (int i = lo; i <= hi; i++) {
+            for (int i = low; i <= high; i++) {
                 aux[i] = a[i];
             }
             System.out.println(
-                "a is already sorted. So, skipped the call to merge...");
+                "Array is already sorted. So, skipped the call to merge...");
             return;
         }
-        merge(a, aux, lo, mid, hi);
+        merge(a, aux, low, mid, high);
     }
     /**
      * Rearranges the a in ascending order, using the natural order.
@@ -82,16 +82,16 @@ class Merge {
     }
     /**
      * {Method for insertion sort}.
-     * sort from a[lo] to a[hi].
+     * sort from a[low] to a[high].
      * Time complexity of insertion sort is O(N^2/2).
      * @param      a     {Comparable a}.
-     * @param      lo    The lower value
-     * @param      hi    The higher value
+     * @param      low    The lower value
+     * @param      high    The higher value
      */
     public void insertionSort(final Comparable[] a,
-                final int lo, final int hi) {
-        for (int i = lo; i <= hi; i++) {
-            for (int j = i; j > lo; j--) {
+                final int low, final int high) {
+        for (int i = low; i <= high; i++) {
+            for (int j = i; j > low; j--) {
                 if (less(a[j], a[j - 1])) {
                     swap(a, j, j - 1);
                 }
@@ -136,14 +136,14 @@ class Merge {
      * Method to determine if the a is sorted (or) not.
      * Time complexity of this method is O(N).
      * @param      a     {Comparable a}
-     * @param      lo    The lower
-     * @param      hi    The higher
+     * @param      low    The lower
+     * @param      high    The higher
      *
      * @return     True if sorted, False otherwise.
      */
     public boolean isSorted(final Comparable[] a,
-                            final int lo, final int hi) {
-        for (int i = lo + 1; i <= hi; i++) {
+                            final int low, final int high) {
+        for (int i = low + 1; i <= high; i++) {
             if (less(a[i], a[i - 1])) {
                 return false;
             }
