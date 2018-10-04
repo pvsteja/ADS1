@@ -1,0 +1,17 @@
+Give traces by showing how the keys E A S Y Q U E S T I O N are sorted with top-down mergesort.
+
+    E     A     S     Y     Q     U     E     S     T     I     O     N
+
+    E     A     S     Y     Q     U  |  E     S     T     I     O     N
+
+    E  A  S   |   Y  Q  U            |  E  S  T   |    I  O  N
+
+    E  A  | S |  Y  Q  |  U          |  E  S  | T |  I  O | N
+
+    A  E  | S |  Q  Y  |  U          |  E  S  | T |  I  O | N
+
+    A  E  S   |   Q U Y              |  E   S   T |  I  N  O
+
+    A  E1  Q  S1  U  Y               |  E2  I  N  O  S2  T
+
+    A   E1   E2   I   N   O   Q   S1   S2   T   U   Y
