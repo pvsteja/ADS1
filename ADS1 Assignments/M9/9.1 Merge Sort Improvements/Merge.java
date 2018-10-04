@@ -116,7 +116,7 @@ class Merge {
      * Time complextiy of this method is O(1).
      * @param      a     {Comparable}.
      * @param      b     {Comparable}.
-     *
+     * The complexity of boolean less is constant.
      * @return     {Boolean value}.
      */
     public boolean less(final Comparable a, final Comparable b) {
