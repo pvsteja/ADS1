@@ -1,21 +1,21 @@
 import java.util.Scanner;
 class Solution {
-    String pairString(String str) {
+    String addString(String s) {
 
-        if (str.length() == 1) {
-            return str;
+        if (s.length() == 1) {
+            return s;
         }
-        if (str.charAt(0) == str.charAt(1)) {
-            return str.charAt(0) + "*" +pairString(str.substring(1));
+        if (s.charAt(0) == s.charAt(1)) {
+            return s.charAt(0) + "*" +addString(s.substring(1));
         }
-        return str.charAt(0) + pairString(str.substring(1));
+        return s.charAt(0) + addString(s.substring(1));
 
     }
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String str =  scan.nextLine();
+        String s =  scan.nextLine();
         Solution s = new Solution();
-        System.out.println(s.pairString(str));
+        System.out.println(s.addString(s));
 
     }
 }
