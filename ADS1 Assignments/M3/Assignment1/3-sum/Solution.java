@@ -22,7 +22,7 @@ public final class Solution {
          */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        int k, n;
+        int n;
         int count = 0;
         n = s.nextInt();
         int[] a = new int[n];
