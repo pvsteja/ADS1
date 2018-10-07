@@ -1,24 +1,24 @@
 import java.util.Scanner;
-/**
+/**.
  * List of linkeds.
  */
 class Linkedlist {
-    /**
+    /**.
      * description of variable head.
      */
     private Node head;
-    /**
+    /**.
      * description of variable size.
      */
     private int size;
-    /**
+    /**.
      * Constructs the object for Linkedlist.
      */
     Linkedlist() {
         this.head = null;
         this.size = 0;
     }
-    /**
+    /**.
      * size of list.
      *
      * @return returns size.
@@ -26,7 +26,7 @@ class Linkedlist {
     public int size() {
         return size;
     }
-    /**
+    /**.
      * Determines if empty.
      *
      * @return     returns true if empty, False otherwise.
@@ -34,7 +34,7 @@ class Linkedlist {
     public boolean isEmpty() {
         return head == null;
     }
-    /**
+    /**.
      * insert at position.
      *
      * @param      position  The position
@@ -43,7 +43,7 @@ class Linkedlist {
     public void insertAt(final int position, final int value) {
         insertAt(head, position, value);
     }
-    /**
+    /**.
      * inserts at a position.
      *
      * @param      node      The node
@@ -70,13 +70,13 @@ class Linkedlist {
         }
         size++;
     }
-    /**
+    /**.
      * reverses the head.
      */
     public void reverse() {
         head = reverse(head);
     }
-    /**
+    /**.
      *reverse of list.
      *
      * @param      h1  The head
@@ -92,7 +92,7 @@ class Linkedlist {
         h1.setNextlink(null);
         return temp;
     }
-    /**
+    /**.
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
@@ -110,17 +110,17 @@ class Linkedlist {
     }
 
 }
-/**
+/**.
  * Class for solution.
  */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
 
     }
-    /**
+    /**.
      * client program.
      *
      * @param      args  The arguments
