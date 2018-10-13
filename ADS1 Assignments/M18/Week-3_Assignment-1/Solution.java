@@ -114,13 +114,13 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour1Max.insert(temp);
       hour1Min.insert(temp);
     }
 
-    hour1Max.print5(bestPerformers);
-    hour1Min.print5(worstPerformers);
+    hour1Max.print(bestPerformers);
+    hour1Min.print(worstPerformers);
 
 
     // hour 2
@@ -129,13 +129,13 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour2Max.insert(temp);
       hour2Min.insert(temp);
     }
 
-    hour2Max.print5(bestPerformers);
-    hour2Min.print5(worstPerformers);
+    hour2Max.print(bestPerformers);
+    hour2Min.print(worstPerformers);
 
     // hour 3
     MinPQ<Stock> hour3Min = new MinPQ<Stock>();
@@ -143,13 +143,13 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour3Max.insert(temp);
       hour3Min.insert(temp);
     }
 
-    hour3Max.print5(bestPerformers);
-    hour3Min.print5(worstPerformers);
+    hour3Max.print(bestPerformers);
+    hour3Min.print(worstPerformers);
 
     // hour 4
     MinPQ<Stock> hour4Min = new MinPQ<Stock>();
@@ -157,14 +157,13 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],
-                             Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour4Max.insert(temp);
       hour4Min.insert(temp);
     }
 
-    hour4Max.print5(bestPerformers);
-    hour4Min.print5(worstPerformers);
+    hour4Max.print(bestPerformers);
+    hour4Min.print(worstPerformers);
 
     // hour 5
     MinPQ<Stock> hour5Min = new MinPQ<Stock>();
@@ -172,14 +171,13 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],
-                             Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
       hour5Max.insert(temp);
       hour5Min.insert(temp);
     }
 
-    hour5Max.print5(bestPerformers);
-    hour5Min.print5(worstPerformers);
+    hour5Max.print(bestPerformers);
+    hour5Min.print(worstPerformers);
 
     // hour 6
     MinPQ<Stock> hour6Min = new MinPQ<Stock>();
@@ -187,13 +185,12 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],
-                             Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
       hour6Max.insert(temp);
       hour6Min.insert(temp);
     }
 
-    hour6Max.print5(bestPerformers);
-    hour6Min.print5(worstPerformers);
+    hour6Max.print(bestPerformers);
+    hour6Min.print(worstPerformers);
   }
 }
