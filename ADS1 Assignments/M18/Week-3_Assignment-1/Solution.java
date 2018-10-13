@@ -105,7 +105,9 @@ public final class Solution {
     Scanner scan = new Scanner(System.in);
 
     int stockSize = Integer.parseInt(scan.nextLine());
+    // creating new ArrayList for bestperformers.
     ArrayList<Stock> bestPerformers = new ArrayList<Stock>();
+    // creating new ArrayList for worst performers.
     ArrayList<Stock> worstPerformers = new ArrayList<Stock>();
 
     // hour 1
