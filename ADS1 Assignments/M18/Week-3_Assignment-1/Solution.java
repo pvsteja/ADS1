@@ -171,7 +171,7 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour5Max.insert(temp);
       hour5Min.insert(temp);
     }
@@ -185,7 +185,7 @@ public final class Solution {
 
     for (int i = 0; i < stockSize; i++) {
       String[] inputs = scan.nextLine().split(",");
-      Stock temp = new Stock(inputs[0],Double.parseDouble(inputs[1]));
+      Stock temp = new Stock(inputs[0], Double.parseDouble(inputs[1]));
       hour6Max.insert(temp);
       hour6Min.insert(temp);
     }
