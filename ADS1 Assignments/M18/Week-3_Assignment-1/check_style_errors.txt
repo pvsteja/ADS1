@@ -1,5 +1,4 @@
 Starting audit...
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:14:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:117: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:117:58: ',' is not followed by whitespace. [WhitespaceAfter]
@@ -8,4 +7,4 @@ Starting audit...
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:146: Line is longer than 80 characters (found 88). [LineLength]
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M18\Week-3_Assignment-1\Solution.java:146:58: ',' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 7 errors.
