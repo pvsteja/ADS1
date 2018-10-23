@@ -13,9 +13,9 @@ class WeightedUnion {
   /**
    * Constructs the object.
    *
-   * @param      n     Total num of elements in the tree.
+   * @param      num Total num of elements in the tree.
    */
-  WeightedUnion(int num) {
+  WeightedUnion(final int num) {
     id = new int[num];
     size = new int[num];
     for (int i = 0; i < num; i++) {
@@ -49,12 +49,18 @@ class WeightedUnion {
   public boolean connected(final int p, final int q) {
     return find(p) == find(q);
   }
-
+  /**
+   * { function_description }
+   *
+   * @param      p     { parameter_description }
+   * @param      q     The quarter
+   */
   public void union(final int p, final int q) {
     int i = find(p);
     int j = find(q);
-    if (i == j) return;
-
+    if (i == j) {
+      return;
+    }
     // make smaller root point to larger one
     if   (size[i] < size[j]) { id[i] = j; size[j] += size[i]; }
     else                 { id[j] = i; size[i] += size[j]; }
