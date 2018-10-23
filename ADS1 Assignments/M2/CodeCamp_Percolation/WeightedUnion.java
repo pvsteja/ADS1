@@ -1,12 +1,6 @@
 /**
- * Importing Arrays package
+ * Class for weighted union.
  */
-import java.util.Arrays;
-/**
- * Importing Scanner package.
- */
-import java.util.Scanner;
-
 class WeightedUnion {
   /**
    * Array for the connections.
@@ -44,7 +38,6 @@ class WeightedUnion {
     }
     return p;
   }
-
   /**
    * checks if connected.
    *

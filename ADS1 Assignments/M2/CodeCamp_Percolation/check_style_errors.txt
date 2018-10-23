@@ -1,15 +1,12 @@
 Starting audit...
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:4:8: Unused import - java.util.Arrays. [UnusedImports]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:8:8: Unused import - java.util.Scanner. [UnusedImports]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:10: Missing a Javadoc comment. [JavadocType]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:22:6: Unused @param tag for 'n'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:24:17: Parameter num should be final. [FinalParameters]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:24:21: Expected @param tag for 'num'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:40:19: Parameter p should be final. [FinalParameters]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:60:3: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:63: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:66:30: '{' at column 30 should have line break after. [LeftCurly]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:66:63: '}' at column 63 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:67:26: '{' at column 26 should have line break after. [LeftCurly]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:16:6: Unused @param tag for 'n'. [JavadocMethod]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:18:17: Parameter num should be final. [FinalParameters]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:18:21: Expected @param tag for 'num'. [JavadocMethod]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:34:19: Parameter p should be final. [FinalParameters]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:53:3: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:56: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:59:30: '{' at column 30 should have line break after. [LeftCurly]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:59:63: '}' at column 63 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M2\CodeCamp_Percolation\WeightedUnion.java:60:26: '{' at column 26 should have line break after. [LeftCurly]
 Audit done.
-Checkstyle ends with 12 errors.
+Checkstyle ends with 9 errors.
