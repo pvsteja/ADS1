@@ -27,7 +27,7 @@ class WeightedUnion {
   /**
    * Searches for the first match.
    *
-   * @param      p     Element in the array.
+   * final @param      p     Element in the array.
    *
    * @return     root of p.
    */
@@ -49,7 +49,7 @@ class WeightedUnion {
   public boolean connected(final int p, final int q) {
     return find(p) == find(q);
   }
-  /**
+  /**.
    * { function_description }
    *
    * @param      p     { parameter_description }
