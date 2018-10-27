@@ -33,9 +33,9 @@ public final class Solution {
       section.put(Integer.parseInt(inp[0]), temp);
     }
     int m = Integer.parseInt(scan.nextLine());
-    for (int j = 0; j< m; j++) {
-      String[] tokens= scan.nextLine().split(" ");
-      switch (tokens[2 ]) {
+    for (int j = 0; j < m; j++) {
+      String[] tokens = scan.nextLine().split(" ");
+      switch (tokens[2]) {
       case "1":
         try {
           System.out.println(section.get(
