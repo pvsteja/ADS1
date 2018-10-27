@@ -48,8 +48,8 @@ public final class Solution {
         try {
           System.out.println(section.get(
                                Integer.parseInt(tokens[1])).getMarks());
-        } catch (Exception e){
-          System.out.println( "Student doesn't exists...");
+        } catch (Exception e) {
+          System.out.println("Student doesn't exists...");
         }
         break;
       default:
