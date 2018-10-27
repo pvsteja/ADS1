@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M24\1\Solution.java:20:3: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 1 errors.
