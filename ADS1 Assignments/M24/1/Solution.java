@@ -17,8 +17,11 @@ public final class Solution {
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
+  	//creating new Scanner from system.
     Scanner sc = new Scanner(System.in);
+    // a new line consists of int which will be stored in n.
     int n = Integer.parseInt(sc.nextLine());
+    //creating a new LinearprobingHashST with integer and string as objects.
     LinearProbingHashST<Integer, String> st =
      new LinearProbingHashST<Integer, String>();
     for (int i = 0; i < n; i++) {

@@ -1,13 +1,22 @@
-/*
+/**
+ * Class for linear probing hash st.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * @param      <Key>    The key
+ * @param      <Value>  The value
  */
 public class LinearProbingHashST<Key, Value> {
+  /**
+   * { var_description }
+   */
   private static final int INIT_CAPACITY = 4;
-
+  /**
+   * declaring private int variable n
+   */
   private int n;
   // number of key-value pairs in the symbol table
+  /**
+  *declaring private int variable m
+  */
   private int m;
   // size of linear probing table
   private Key[] keys;
@@ -26,7 +35,7 @@ public class LinearProbingHashST<Key, Value> {
    *
    * @param capacity the initial capacity
    */
-  public LinearProbingHashST(int capacity) {
+  public LinearProbingHashST(final int capacity) {
     m = capacity;
     n = 0;
     keys = (Key[])   new Object[m];
@@ -59,7 +68,7 @@ public class LinearProbingHashST<Key, Value> {
    *         {@code false} otherwise
    * @throws IllegalArgumentException if {@code key} is {@code null}
    */
-  public boolean contains(Key key) {
+  public boolean contains(final Key key) {
     if (key == null) throw new IllegalArgumentException(
       "argument to contains() is null");
     return get(key) != null;
@@ -74,7 +83,7 @@ public class LinearProbingHashST<Key, Value> {
 
   // resizes the hash table to the given capacity
   //by re-hashing all of the keys
-  private void resize(int capacity) {
+  private void resize(final int capacity) {
     LinearProbingHashST<Key, Value> temp =
     new LinearProbingHashST<Key, Value>(capacity);
     for (int i = 0; i < m; i++) {
@@ -99,7 +108,7 @@ public class LinearProbingHashST<Key, Value> {
    * @param  val the value
    * @throws IllegalArgumentException if {@code key} is {@code null}
    */
-  public void put(Key key, Value val) {
+  public void put(final Key key, final Value val) {
     if (key == null) throw new IllegalArgumentException(
       "first argument to put() is null");
 
@@ -112,14 +121,14 @@ public class LinearProbingHashST<Key, Value> {
     if (n >= m / 2) resize(2 * m);
 
     int i;
-    for (i = hash(key); keys[i] != null; i = (i) % m) {
+    for (i = hash(key); keys[i] != null; i = (i + 1) % m) {
       if (keys[i].equals(key)) {
-        vals[n] = val;
+        vals[i] = val;
         return;
       }
     }
-    keys[n] = key;
-    vals[n] = val;
+    keys[i] = key;
+    vals[i] = val;
     n++;
   }
 
@@ -130,7 +139,7 @@ public class LinearProbingHashST<Key, Value> {
    *         {@code null} if no such value
    * @throws IllegalArgumentException if {@code key} is {@code null}
    */
-  public Value get(Key key) {
+  public Value get(final Key key) {
     if (key == null) throw new IllegalArgumentException(
       "argument to get() is null");
     for (int i = hash(key); keys[i] != null; i = (i + 1) % m)
@@ -147,7 +156,7 @@ public class LinearProbingHashST<Key, Value> {
    * @param  key the key
    * @throws IllegalArgumentException if {@code key} is {@code null}
    */
-  public void delete(Key key) {
+  public void delete(final Key key) {
     if (key == null) throw new IllegalArgumentException(
       "argument to delete() is null");
     if (!contains(key)) return;
