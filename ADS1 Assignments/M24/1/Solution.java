@@ -21,10 +21,10 @@ public final class Solution {
     int n = Integer.parseInt(sc.nextLine());
     LinearProbingHashST<Integer, String> st =
      new LinearProbingHashST<Integer, String>();
-    for (int i =0; i <n; i++) {
+    for (int i = 0; i < n; i++) {
       String[] tokens = sc.nextLine().split(",");
       String s = tokens[1] + "," + tokens[2];
-      st.put( Integer.parseInt(tokens[0]), s);
+      st.put(Integer.parseInt(tokens[0]), s);
     }
     int m = Integer.parseInt(sc.nextLine());
     for (int j = 0; j < n; j++) {
