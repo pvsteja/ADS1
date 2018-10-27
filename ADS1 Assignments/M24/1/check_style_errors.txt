@@ -1,0 +1,6 @@
+Starting audit...
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M24\1\Solution.java:24:17: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M24\1\Solution.java:24:23: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M24\1\Solution.java:27:14: '(' is followed by whitespace. [ParenPad]
+Audit done.
+Checkstyle ends with 3 errors.
