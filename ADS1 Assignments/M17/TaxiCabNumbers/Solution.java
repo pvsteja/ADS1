@@ -1,140 +1,129 @@
 import java.util.Scanner;
-
 /**
  * Class for cube sum.
  */
-class CubeSum implements Comparable<CubeSum> {
-  /**.
-   * { var_description }
-   */
-  private final int sum;
-  /**.
-   * { var_description }
-   */
-  private final int i;
-  /**.
-   * { var_description }
-   */
-  private final int j;
-
-  /**
-   * Constructs the object cubesum with integer parameters i, j.
-   *
-   * @param      i     { parameter_description }
-   * @param      j     { parameter_description }
-   */
-  public CubeSum(final int I, final int J) {
-    this.sum = I * I * I + J * J * J;
-    this.i = I;
-    this.j = J;
-  }
-
-  /**.
-   * { function_description }
-   *
-   * @param      that  The that
-   *
-   * @return     { description_of_the_return_value }
-   */
-  public int compareTo(final CubeSum that) {
-    if (this.sum < that.sum) {
-      return -1;
+class CubesSum implements Comparable<CubesSum> {
+    /**
+     * Integer varaible.
+     */
+    private final int sum;
+    /**
+     * Integer varaible.
+     */
+    private final int i;
+    /**
+     * Integer varaible.
+     */
+    private final int j;
+    /**
+     * Constructs the object.
+     *
+     * @param      i1    I 1
+     * @param      j1    The j 1
+     */
+    CubesSum(final int i1, final int j1) {
+        this.sum = i1 * i1 *  i1 + j1 * j1 * j1;
+        this.i = i1;
+        this.j = j1;
     }
-    if (this.sum > that.sum) {
-      return +1;
+    /**
+     * Gets the sum.
+     * Time complexity is 1.
+     *
+     * @return     The sum.
+     */
+    public int getSum() {
+        return this.sum;
     }
-    return 0;
-  }
-
-  /**
-   * Returns a string representation of the object.
-   *
-   * @return     String representation of the object.
-   */
-  public String toString() {
-    return sum + " = " + i + "^3" + " + " + j + "^3";
-  }
-
-  /**.
-   * { function_description }
-   *
-   * @return     { description_of_the_return_value }
-   */
-  public int sum() {
-    return sum;
-  }
-
-  /**.
-   * { function_description }
-   *
-   * @return     { description_of_the_return_value }
-   */
-  public int geti() {
-    return i;
-  }
-
-  /**.
-   * { function_description }
-   *
-   * @return     { description_of_the_return_value }
-   */
-  public int getj() {
-    return j;
-  }
-
+    /**
+     * Gets i.
+     * Time complexity is 1.
+     *
+     * @return     I.
+     */
+    public int getI() {
+        return this.i;
+    }
+    /**
+     * Gets the j.
+     * Time complexity is 1.
+     *
+     * @return     The j.
+     */
+    public int getJ() {
+        return this.j;
+    }
+    /**
+     * compareTo method is using to compare the two objects.
+     * Time complexity is 1.
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int compareTo(final CubesSum that) {
+        if (this.sum < that.sum) {
+            return -1;
+        }
+        if (this.sum > that.sum) {
+            return +1;
+        }
+        return 0;
+    }
+    /**
+     * Returns a string representation of the object.
+     * Time complexity is 1.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        return Integer.toString(sum);
+    }
 }
-
 /**
- * Class for Solution.
+ * Class for solution.
  */
 public final class Solution {
-  /**
-   * Constructs the object.
-   */
-  private Solution() {
-    // unused
-  }
-  /**
-   * Main method.
-   *
-   * @param      args  The arguments
-   */
-  public static void main(final String[] args) {
-    Scanner scan = new Scanner(System.in);
-    int num = scan.nextInt();
-    int mWays = scan.nextInt();
-
-    MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
-
-    for (int i = 1; i <= 550; i++) {
-      pq.insert(new CubeSum(i, i));
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        // default constructor is not used.
     }
-
-        CubeSum prev = new CubeSum(0, 0);
-        long sum = 0;
-        // for (k < n; k++) {
-        int p = 1;
-        int k = 0;
-      while (!pq.isEmpty()) {
-        CubeSum c = pq.delMin();
-          if (prev.sum() == c.sum()) {
-            p++;
-            if (p == mWays)
-          {
-            sum = c.sum();
-
-            if (++k == num) break;
-            }
-          }
-          else {
-            p = 1;
-          }
-          prev = c;
-          if (c.getj() < 550)
-              pq.insert(new CubeSum(c.geti(), c.getj() + 1));
-          // }
+    /**
+     * main function.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        final int num = 1200;
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        int m = scan.nextInt();
+        int count = 0;
+        int z1 = -1;
+        MinPQ<CubesSum> pq = new MinPQ<CubesSum>();
+        for (int i = 0; i <= num; i++) {
+            pq.insert(new CubesSum(i, i));
         }
-        System.out.println(sum);
-
-  }
+        while (!pq.isEmpty()) {
+            CubesSum s = pq.delMin();
+            if (z1 == s.getSum()) {
+                count++;
+            } else {
+                count = 0;
+            }
+            if (count == m - 1) {
+                n--;
+                if (n == 0) {
+                    System.out.println(s.getSum());
+                    break;
+                }
+            }
+            z1 = s.getSum();
+            if (s.getJ() < num) {
+                pq.insert(new CubesSum(s.getI(), s.getJ() + 1));
+            }
+        }
+    }
 }

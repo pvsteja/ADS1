@@ -1,16 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:23:6: Unused @param tag for 'i'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:24:6: Unused @param tag for 'j'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:26:3: Redundant 'public' modifier. [RedundantModifier]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:26:28: Expected @param tag for 'I'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:26:28: Name 'I' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:26:41: Expected @param tag for 'J'. [JavadocMethod]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:26:41: Name 'J' must match pattern '^[a-z][a-zA-Z0-9]*$'. [ParameterName]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:109:26: '550' is a magic number. [MagicNumber]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:123:11: '{' at column 11 should be on the previous line. [LeftCurly]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:126: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:128:11: '}' at column 11 should be on the same line as the next part of a multi-block statement (one that directly contains multiple blocks: if/else-if/else, do/while or try/catch/finally). [RightCurly]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:133: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS1\ADS1 Assignments\M17\TaxiCabNumbers\Solution.java:133:26: '550' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 13 errors.
