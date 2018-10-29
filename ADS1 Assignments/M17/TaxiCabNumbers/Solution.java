@@ -4,15 +4,15 @@ import java.util.Scanner;
  * Class for cube sum.
  */
 class CubeSum implements Comparable<CubeSum> {
-  /**
+  /**.
    * { var_description }
    */
   private final int sum;
-  /**
+  /**.
    * { var_description }
    */
   private final int i;
-  /**
+  /**.
    * { var_description }
    */
   private final int j;
@@ -23,13 +23,13 @@ class CubeSum implements Comparable<CubeSum> {
    * @param      i     { parameter_description }
    * @param      j     { parameter_description }
    */
-  public CubeSum(final int i, final int j) {
-    this.sum = i * i * i + j * j * j;
-    this.i = i;
-    this.j = j;
+  public CubeSum(final int I, final int J) {
+    this.sum = I * I * I + J * J * J;
+    this.i = I;
+    this.j = J;
   }
 
-  /**
+  /**.
    * { function_description }
    *
    * @param      that  The that
@@ -37,8 +37,12 @@ class CubeSum implements Comparable<CubeSum> {
    * @return     { description_of_the_return_value }
    */
   public int compareTo(final CubeSum that) {
-    if (this.sum < that.sum) return -1;
-    if (this.sum > that.sum) return +1;
+    if (this.sum < that.sum) {
+      return -1;
+    }
+    if (this.sum > that.sum) {
+      return +1;
+    }
     return 0;
   }
 
@@ -51,7 +55,7 @@ class CubeSum implements Comparable<CubeSum> {
     return sum + " = " + i + "^3" + " + " + j + "^3";
   }
 
-  /**
+  /**.
    * { function_description }
    *
    * @return     { description_of_the_return_value }
@@ -60,7 +64,7 @@ class CubeSum implements Comparable<CubeSum> {
     return sum;
   }
 
-  /**
+  /**.
    * { function_description }
    *
    * @return     { description_of_the_return_value }
@@ -69,7 +73,7 @@ class CubeSum implements Comparable<CubeSum> {
     return i;
   }
 
-  /**
+  /**.
    * { function_description }
    *
    * @return     { description_of_the_return_value }
@@ -90,13 +94,13 @@ public final class Solution {
   private Solution() {
     // unused
   }
-  static Scanner scan = new Scanner(System.in);
   /**
    * Main method.
    *
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
+    Scanner scan = new Scanner(System.in);
     int num = scan.nextInt();
     int mWays = scan.nextInt();
 
