@@ -1,34 +1,79 @@
 import java.util.Scanner;
 
+/**
+ * Class for cube sum.
+ */
 class CubeSum implements Comparable<CubeSum> {
+  /**
+   * { var_description }
+   */
   private final int sum;
+  /**
+   * { var_description }
+   */
   private final int i;
+  /**
+   * { var_description }
+   */
   private final int j;
 
-  public CubeSum(int i, int j) {
+  /**
+   * Constructs the object cubesum with integer parameters i, j.
+   *
+   * @param      i     { parameter_description }
+   * @param      j     { parameter_description }
+   */
+  public CubeSum(final int i, final int j) {
     this.sum = i * i * i + j * j * j;
     this.i = i;
     this.j = j;
   }
 
-  public int compareTo(CubeSum that) {
+  /**
+   * { function_description }
+   *
+   * @param      that  The that
+   *
+   * @return     { description_of_the_return_value }
+   */
+  public int compareTo(final CubeSum that) {
     if (this.sum < that.sum) return -1;
     if (this.sum > that.sum) return +1;
     return 0;
   }
 
+  /**
+   * Returns a string representation of the object.
+   *
+   * @return     String representation of the object.
+   */
   public String toString() {
     return sum + " = " + i + "^3" + " + " + j + "^3";
   }
 
+  /**
+   * { function_description }
+   *
+   * @return     { description_of_the_return_value }
+   */
   public int sum() {
     return sum;
   }
 
+  /**
+   * { function_description }
+   *
+   * @return     { description_of_the_return_value }
+   */
   public int geti() {
     return i;
   }
 
+  /**
+   * { function_description }
+   *
+   * @return     { description_of_the_return_value }
+   */
   public int getj() {
     return j;
   }
