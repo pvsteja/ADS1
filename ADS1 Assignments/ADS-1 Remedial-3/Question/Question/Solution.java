@@ -25,7 +25,7 @@ class Solution {
 					System.out.println();
 					int size = max.size();
 					for (int i = 0; i < size; i++) {
-						System.out.println(i+1 + ":" + max.delMax());
+						System.out.println(i+1 + ": " + max.delMax());
 					}
 
 			}
