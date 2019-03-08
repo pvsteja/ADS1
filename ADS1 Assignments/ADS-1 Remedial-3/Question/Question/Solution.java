@@ -8,7 +8,7 @@ class Solution {
 		MaxPQ<Candidates> max = new MaxPQ<>();
 		// double a[] = new double[n];
 		int inp = Integer.parseInt(s.nextLine());
-		while(inp > 0) {
+		while(s.hasNextLine()) {
 			String[] str = s.nextLine().split(" ");
 
 			switch(str[0]) {
@@ -19,7 +19,7 @@ class Solution {
 					break;
 				case "Recruit_Top_Candidate":
 					System.out.println(max.delMax());
-					inp--;
+					// inp--;
 					break;
 				case "Ranking":
 					System.out.println();
